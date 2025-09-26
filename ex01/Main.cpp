@@ -30,6 +30,6 @@ int main()
         }
     }
 
-    std::cout << "\nPhonebook closed. Goodbye!" << std::endl;
+    std::cout << "\nPhonebook closed." << std::endl;
     return 0;
 }

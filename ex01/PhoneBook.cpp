@@ -14,14 +14,38 @@ void PhoneBook::addContact() {
 
     std::cout << "Enter your first name: ";
     std::getline(std::cin, first);
+    while (first.empty()) {
+        std::cout << "Field cannot be empty. Please re-enter first name: ";
+        std::getline(std::cin, first);
+    }
+
     std::cout << "Enter your last name: ";
     std::getline(std::cin, last);
+    while (last.empty()) {
+        std::cout << "Field cannot be empty. Please re-enter last name: ";
+        std::getline(std::cin, last);
+    }
+
     std::cout << "Enter your nickname: ";
     std::getline(std::cin, nick);
+    while (nick.empty()) {
+        std::cout << "Field cannot be empty. Please re-enter nickname: ";
+        std::getline(std::cin, nick);
+    }
+
     std::cout << "Enter your PhoneNumber: ";
     std::getline(std::cin, phone);
+    while (phone.empty()) {
+        std::cout << "Field cannot be empty. Please re-enter phone number: ";
+        std::getline(std::cin, phone);
+    }
+
     std::cout << "Enter your darkest Secret: ";
     std::getline(std::cin, secret);
+    while (secret.empty()) {
+        std::cout << "Field cannot be empty. Please re-enter darkest secret: ";
+        std::getline(std::cin, secret);
+    }
 
     this->contacts[this->oldest_idx].setContact(first, last, nick, phone, secret);
     this->oldest_idx = (this->oldest_idx + 1) % 8;
